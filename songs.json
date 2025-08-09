@@ -1,14 +1,20 @@
 [
   {
-    "name": "ماجده الرومي",
-    "image": "images/majeda.jpg",
-    "audio": "audio/audio/majeda.mp3",
+    "name": "ماجدة الرومي",
+    "image": "images/ماغدة_الرومي.jpg",
+    "audio": "https://www.youtube.com/watch?v=J3Ov7pSjZvA",
     "language": "arabic"
-  }
-   {
-    "name": "وائل",
-    "image": "images/wael.jpg",
-    "audio": "https://youtu.be/7NHq_QlM-wE?si=k5xW7sTsqmQzXbPv",
+  },
+  {
+    "name": "عمرو دياب",
+    "image": "images/عمرو_دياب.jpg",
+    "audio": "https://www.youtube.com/watch?v=H73LqBk8xTE",
     "language": "arabic"
+  },
+  {
+    "name": "إمينيم",
+    "image": "images/Eminem.jpg",
+    "audio": "https://www.youtube.com/watch?v=pBk4NYhWNMM",
+    "language": "english"
   }
 ]
