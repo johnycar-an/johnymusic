@@ -5,4 +5,10 @@
     "audio": "audio/audio/3kalimat.mp3",
     "language": "arabic"
   }
+   {
+    "name": "اليسا",
+    "image": "images/majeda.jpg",
+    "audio": "https://drive.google.com/file/d/1rnY8XAhFpwwHnYXW2ay77Bhj2mol66pm/view?usp=drive_link",
+    "language": "arabic"
+  }
 ]
