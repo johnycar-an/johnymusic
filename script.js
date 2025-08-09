@@ -1,6 +1,5 @@
 let currentAudio = null;
 
-// تحميل قائمة الأغاني
 fetch('songs.json')
   .then(res => res.json())
   .then(songs => {
@@ -9,7 +8,6 @@ fetch('songs.json')
   })
   .catch(err => console.error('خطأ في تحميل الأغاني:', err));
 
-// عرض الأغاني
 function displaySongs(songs) {
   const container = document.getElementById('songs-container');
   container.innerHTML = '';
@@ -26,21 +24,15 @@ function displaySongs(songs) {
   });
 }
 
-// تشغيل الأغنية
 function playSong(audioSrc, name) {
   if (currentAudio) {
     currentAudio.pause();
   }
   const audio = new Audio(audioSrc);
-  audio.play().catch(e => alert("فشل التشغيل. تأكد من اسم الملف."));
+  audio.play().catch(e => alert("فشل التشغيل. تحقق من اسم الملف أو المسار."));
   currentAudio = audio;
-  document.getElementById('songs-container').style.opacity = '0.8';
-  setTimeout(() => {
-    document.getElementById('songs-container').style.opacity = '1';
-  }, 200);
 }
 
-// تصفية حسب اللغة
 function filter(lang) {
   document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.classList.remove('active');
