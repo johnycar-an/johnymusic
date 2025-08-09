@@ -7,8 +7,14 @@
   }
    {
     "name": "اليسا",
-    "image": "images/majeda.jpg",
+    "image": "images/elissa.jpg",
     "audio": "https://drive.google.com/file/d/1rnY8XAhFpwwHnYXW2ay77Bhj2mol66pm/view?usp=drive_link",
+    "language": "arabic"
+  }
+ {
+    "name": "وائل كفوري",
+    "image": "images/wael.jpg",
+    "audio": "https://youtu.be/7NHq_QlM-wE?si=hXCs1xr9qPZE_Cyg",
     "language": "arabic"
   }
 ]
