@@ -8,6 +8,7 @@
 </head>
 <body>
   <h1>🎵 جوني ميوزك | كاريوكي</h1>
+
   <div class="tabs">
     <button class="tab-btn active" onclick="filter('all')">الكل</button>
     <button class="tab-btn" onclick="filter('arabic')">عربي</button>
@@ -15,6 +16,22 @@
   </div>
 
   <div id="songs-container"></div>
+
+  <!-- مكان عرض الفيديو -->
+  <div id="video-player" style="display: none; margin-top: 30px;">
+    <iframe 
+      id="youtube-frame" 
+      width="90%" 
+      height="400" 
+      src="" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+    <button onclick="closeVideo()" style="margin-top: 10px; padding: 10px 20px; background: #d32f2f; color: white; border: none; border-radius: 5px; cursor: pointer;">
+      إغلاق الفيديو
+    </button>
+  </div>
 
   <script src="script.js"></script>
 </body>
