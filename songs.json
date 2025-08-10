@@ -1,23 +1,23 @@
 [
   {
-    "name": " ماجدة الرومي - كلمات",
+    "name": "ماجدة الرومي - كلمات",
     "image": "images/majeda.jpg",
     "audio": "https://www.youtube.com/watch?v=DOql4jtuS9k&ab_channel=bahijbacha",
     "language": "arabic"
-  }
+  },
   {
     "name": "معاك قلبي - عمرو دياب",
     "image": "images/amrodiab.jpg",
     "audio": "https://www.youtube.com/watch?v=9I_z97TeyDk&ab_channel=KaraokeArabia",
     "language": "arabic"
-  }
+  },
   {
     "name": "إمينيم",
     "image": "images/Eminem.jpg",
     "audio": "https://www.youtube.com/watch?v=pBk4NYhWNMM",
     "language": "english"
-  }
-{
+  },
+  {
     "name": "Frank Sinatra - My Way",
     "image": "images/Frank Sinatra.jpg",
     "audio": "https://www.youtube.com/watch?v=tAEek8nO11c&ab_channel=SingKing",
