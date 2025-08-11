@@ -72,4 +72,22 @@ function filter(lang) {
 
   fetch('songs.json')
     .then(res => res.json())
-    .then
+    .then(songs => {
+      let filtered = songs;
+      if (lang === 'arabic') filtered = songs.filter(s => s.language === 'arabic');
+      if (lang === 'english') filtered = songs.filter(s => s.language === 'english');
+      displaySongs(filtered);
+    });
+}
+
+// تحميل الأغاني عند بدء التشغيل
+fetch('songs.json')
+  .then(res => res.json())
+  .then(songs => {
+    window.allSongs = songs;
+    displaySongs(songs);
+  })
+  .catch(err => {
+    alert('فشل تحميل قائمة الأغاني. تحقق من ملف songs.json');
+    console.error('خطأ:', err);
+  });
