@@ -1,75 +1,40 @@
-function playSong(videoUrl, name) {
-  // استخراج معرف الفيديو من رابط YouTube
-  const videoIdMatch = videoUrl.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|v\/|shorts\/))([^&?/]+)/);
-  const videoId = videoIdMatch ? videoIdMatch[1] : null;
+function playSong(src, name) {
+  const container = document.getElementById('video-player');
+  const frame = document.getElementById('youtube-frame');
+  const audio = document.getElementById('local-audio');
 
-  if (!videoId) {
-    alert("رابط YouTube غير صحيح. تأكد من الرابط.");
-    return;
-  }
+  // إخفاء كل شيء أولًا
+  if (frame) frame.src = '';
+  if (audio) audio.pause();
+  container.style.display = 'none';
+  document.getElementById('audio-player')?.remove();
 
-  // إظهار مشغل الفيديو
-  const videoPlayer = document.getElementById('video-player');
-  const youtubeFrame = document.getElementById('youtube-frame');
+  // إذا كان الرابط يحتوي على youtube أو youtu.be
+  if (src.includes('youtube.com') || src.includes('youtu.be')) {
+    // استخراج معرف الفيديو
+    const videoIdMatch = src.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/))([^&?/]+)/);
+    const videoId = videoIdMatch ? videoIdMatch[1] : null;
 
-  youtubeFrame.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-  videoPlayer.style.display = 'block';
+    if (!videoId) {
+      alert('رابط YouTube غير صحيح');
+      return;
+    }
 
-  // تمرير اسم الأغنية كعنوان (اختياري)
-  document.title = `تشغيل: ${name} - كاريوكي`;
-}
+    const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+    document.getElementById('youtube-frame').src = embedUrl;
+    document.getElementById('video-player').style.display = 'block';
 
-// إغلاق الفيديو
-function closeVideo() {
-  const youtubeFrame = document.getElementById('youtube-frame');
-  const videoPlayer = document.getElementById('video-player');
-  
-  youtubeFrame.src = ''; // إيقاف الفيديو
-  videoPlayer.style.display = 'none';
-}
-
-// عرض الأغاني
-function displaySongs(songs) {
-  const container = document.getElementById('songs-container');
-  container.innerHTML = '';
-
-  songs.forEach(song => {
-    const div = document.createElement('div');
-    div.className = 'singer-card';
-    div.innerHTML = `
-      <img src="${song.image}" alt="${song.name}">
-      <p>${song.name}</p>
-    `;
-    div.onclick = () => playSong(song.audio, song.name);
-    container.appendChild(div);
-  });
-}
-
-// تصفية حسب اللغة
-function filter(lang) {
-  document.querySelectorAll('.tab-btn').forEach(btn => {
-    btn.classList.remove('active');
-  });
-  event.target.classList.add('active');
-
-  fetch('songs.json')
-    .then(res => res.json())
-    .then(songs => {
-      let filtered = songs;
-      if (lang === 'arabic') filtered = songs.filter(s => s.language === 'arabic');
-      if (lang === 'english') filtered = songs.filter(s => s.language === 'english');
-      displaySongs(filtered);
-    });
-}
-
-// تحميل الأغاني عند التحميل
-fetch('songs.json')
-  .then(res => res.json())
-  .then(songs => {
-    window.allSongs = songs;
-    displaySongs(songs);
-  })
-  .catch(err => {
-    console.error('خطأ في تحميل songs.json:', err);
-    alert('فشل تحميل قائمة الأغاني.');
-  });
+  } 
+  // إذا كان ملف صوتي محلي (mp3)
+  else if (src.endsWith('.mp3') || src.endsWith('.wav') || src.includes('audio/')) {
+    const audioPlayer = document.createElement('div');
+    audioPlayer.id = 'audio-player';
+    audioPlayer.style = 'margin: 30px auto; text-align: center; padding: 20px; background: #121212; border: 1px solid #333; border-radius: 10px; max-width: 400px;';
+    audioPlayer.innerHTML = `
+      <h3>تشغيل: ${name}</h3>
+      <audio controls autoplay style="width: 100%;">
+        <source src="${src}" type="audio/mpeg">
+        لم يُدعم تنسيق الصوت في متصفحك.
+      </audio>
+      <br>
+      <button onclick
