@@ -2,14 +2,14 @@
   {
     "name": "ماجدة الرومي - كلمات",
     "image": "images/majeda.jpg",
-    "audio": "https://www.youtube.com/watch?v=DOql4jtuS9k&ab_channel=bahijbacha",
+    "audio": "audio/majeda.mp3",
     "language": "arabic",
     "difficulty": -5
   },
   {
     "name": "عمرو دياب - معاك قلبي",
     "image": "images/amrodiab.jpg",
-    "audio": "/audio/+3Ablani-Hayk Majida-ELRomi-.mp3",
+    "audio": "/audio/3Amr Diab-Maak Alby.mp3",
     "language": "arabic",
     "difficulty": 3
   },
