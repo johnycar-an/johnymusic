@@ -6,40 +6,41 @@
   <title>كاريوكي جوني</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-  <!-- مشغل الملفات الصوتية المحلية -->
-<div id="audio-player-container"></div>
 <body>
+
+  <!-- اللوجو في الأعلى -->
+  <div style="text-align: center; margin: 15px 0;">
+    <img src="images/logo.png" alt="اللوجو" style="height: 60px;">
+  </div>
+
   <h1>🎵 جوني ميوزك | كاريوكي</h1>
-<p class="subtitle">استمع إلى كاريوكي مفضلاتك وغنِ مع الأغاني</p>
+
   <div class="tabs">
-  <button class="tab-btn active" onclick="filter('all')">الكل</button>
-  <button class="tab-btn" onclick="filter('arabic')">عربي</button>
-  <button class="tab-btn" onclick="filter('english')">أجنبي</button>
-  <button class="tab-btn" onclick="filter('turkish')">تركي</button>
-  <button class="tab-btn" onclick="filter('music')">موسيقى</button>
+    <button class="tab-btn active" onclick="filter('all')">الكل</button>
+    <button class="tab-btn" onclick="filter('arabic')">عربي</button>
+    <button class="tab-btn" onclick="filter('english')">أجنبي</button>
+    <button class="tab-btn" onclick="filter('turkish')">تركي</button>
+    <button class="tab-btn" onclick="filter('music')">موسيقى</button>
   </div>
 
   <div id="songs-container"></div>
 
-  <!-- مكان عرض الفيديو -->
-  <div id="video-player" style="display: none; margin-top: 30px;">
+  <!-- مشغل الفيديو (YouTube) -->
+  <div id="video-player" style="display: none; text-align: center; margin: 30px auto;">
     <iframe 
       id="youtube-frame" 
       width="90%" 
-      height="400" 
-      src="" 
+      max-width="800px" 
+      height="450" 
       frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allow="autoplay; encrypted-media; gyroscope; picture-in-picture" 
       allowfullscreen>
     </iframe>
-    <button onclick="closeVideo()" style="margin-top: 10px; padding: 10px 20px; background: #d32f2f; color: white; border: none; border-radius: 5px; cursor: pointer;">
-      إغلاق الفيديو
+    <button onclick="closeVideo()" style="margin-top: 15px; padding: 12px 30px; background: #d32f2f; color: white; border: none; border-radius: 30px; cursor: pointer;">
+      إغلاق
     </button>
   </div>
 
   <script src="script.js"></script>
 </body>
-  <div style="text-align: center; margin: 15px 0;">
-  <img src="images/logo.png" alt="اللوجو" style="height: 60px;">
-</div>
 </html>
