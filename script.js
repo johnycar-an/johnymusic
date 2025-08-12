@@ -8,6 +8,7 @@ function displaySongs(songs) {
     div.className = 'singer-card';
     div.innerHTML = `
       <img src="${song.image}" alt="${song.name}">
+      <div class="badge">${song.difficulty}</div>
       <p>${song.name}</p>
     `;
     div.onclick = () => playSong(song.audio, song.name);
@@ -15,12 +16,12 @@ function displaySongs(songs) {
   });
 }
 
-// تشغيل الأغنية (مزيج بين ملفات محلية ويوتيوب)
+// تشغيل الأغنية (يوتيوب أو ملف محلي)
 function playSong(src, name) {
   const videoPlayer = document.getElementById('video-player');
   const youtubeFrame = document.getElementById('youtube-frame');
 
-  // إخفاء المشغل القديم أولًا
+  // إخفاء المشغل القديم
   if (youtubeFrame) youtubeFrame.src = '';
   videoPlayer.style.display = 'none';
   document.getElementById('audio-player')?.remove();
@@ -63,6 +64,13 @@ function playSong(src, name) {
   }
 }
 
+// إغلاق فيديو اليوتيوب
+function closeVideo() {
+  const youtubeFrame = document.getElementById('youtube-frame');
+  youtubeFrame.src = '';
+  document.getElementById('video-player').style.display = 'none';
+}
+
 // تصفية حسب اللغة
 function filter(lang) {
   document.querySelectorAll('.tab-btn').forEach(btn => {
@@ -76,11 +84,13 @@ function filter(lang) {
       let filtered = songs;
       if (lang === 'arabic') filtered = songs.filter(s => s.language === 'arabic');
       if (lang === 'english') filtered = songs.filter(s => s.language === 'english');
+      if (lang === 'turkish') filtered = songs.filter(s => s.language === 'turkish');
+      if (lang === 'music') filtered = songs.filter(s => s.language === 'music');
       displaySongs(filtered);
     });
 }
 
-// تحميل الأغاني عند بدء التشغيل
+// تحميل الأغاني
 fetch('songs.json')
   .then(res => res.json())
   .then(songs => {
