@@ -11,7 +11,7 @@
     "image": "images/amrodiab.jpg",
     "audio": "/audio/+3Ablani-Hayk Majida-ELRomi-.mp3",
     "language": "arabic",
-    "difficulty": +3
+    "difficulty": 3
   },
   {
     "name": "إمينم - When I'm Gone",
@@ -25,7 +25,7 @@
     "image": "images/Candan Erçetin SENSİZLİK.jpg",
     "audio": "https://www.youtube.com/watch?v=CsaMHLDKIhY&list=PLu559MPsSnePbNJvmLK2-mDm6kF8wmYVF",
     "language": "turkish",
-    "difficulty": +6
+    "difficulty": 6
   },
   {
     "name": "موسيقى هادئة",
