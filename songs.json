@@ -7,9 +7,23 @@
     "difficulty": -5
   },
   {
-    "name": "عمرو دياب - معاك قلبي",
+    "name": "عمرو دياب-معاك قلبي",
     "image": "images/amrodiab.jpg",
     "audio": "/audio/3Amr Diab-Maak Alby.mp3",
+    "language": "arabic",
+    "difficulty": 3
+  },
+  {
+    "name": "عمرو دياب- تملي معاك",
+    "image": "images/amrodiab.jpg",
+    "audio": "https://www.youtube.com/watch?v=EgmXTmj62ic",
+    "language": "arabic",
+    "difficulty": 3
+  },
+   {
+    "name": "عمرو دياب-نور العين",
+    "image": "images/amrodiab.jpg",
+    "audio": "https://www.youtube.com/watch?v=KLJA-srM_yM",
     "language": "arabic",
     "difficulty": 3
   },
