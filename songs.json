@@ -9,21 +9,21 @@
   {
     "name": "عمرو دياب-معاك قلبي",
     "image": "images/amrodiab.jpg",
-    "audio": "/audio/Maak Alby.mp3",
+    "audio": "audio/Maak Alby.mp3",
     "language": "arabic",
     "difficulty": 3
   },
   {
     "name": "عمرو دياب- تملي معاك",
     "image": "images/amrodiab.jpg",
-    "audio": "/audio/Maak Alby.mp3",
+    "audio": "audio/Maak Alby.mp3",
     "language": "arabic",
     "difficulty": 3
   },
-   {
+  {
     "name": "عمرو دياب-نور العين",
     "image": "images/amrodiab.jpg",
-    "audio": "/audio/Maak Alby.mp3",
+    "audio": "audio/Maak Alby.mp3",
     "language": "arabic",
     "difficulty": 3
   },
