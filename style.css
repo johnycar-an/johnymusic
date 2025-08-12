@@ -1,4 +1,4 @@
-/* تصميم عام يشبه Spotify */
+/* تصميم عام */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #121212;
@@ -18,7 +18,7 @@ h1 {
   text-shadow: 0 0 5px rgba(29, 185, 84, 0.3);
 }
 
-/* تخطيط أزرار التصنيفات */
+/* أزرار التصنيفات */
 .tabs {
   text-align: center;
   margin: 30px 0;
@@ -65,7 +65,7 @@ h1 {
   position: relative;
   width: 160px;
   cursor: pointer;
-  transition: transform 0.2s, opacity 0.2s;
+  transition: transform 0.2s;
 }
 
 .singer-card:hover {
@@ -82,16 +82,16 @@ h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* الدائرة الصغيرة على الزاوية (عدد الأغاني) */
+/* الدائرة الحمراء (درجة الصعوبة) */
 .badge {
   position: absolute;
   top: 8px;
-  right: 8px; /* من الزاوية اليمنى العلوية */
+  right: 8px;
   width: 30px;
   height: 30px;
   background: #d32f2f;
   color: white;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: bold;
   border-radius: 50%;
   display: flex;
@@ -99,6 +99,7 @@ h1 {
   justify-content: center;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
   z-index: 2;
+  border: 2px solid white;
 }
 
 .singer-card p {
@@ -115,11 +116,10 @@ h1 {
 
 /* مشغل الفيديو */
 #video-player {
+  display: none;
   text-align: center;
   margin: 30px auto;
   max-width: 900px;
-  display: none;
-  animation: fadeIn 0.5s;
 }
 
 #youtube-frame {
@@ -133,48 +133,28 @@ h1 {
 }
 
 #video-player button {
-  background: #1DB954;
+  background: #d32f2f;
   color: white;
   border: none;
   padding: 12px 30px;
   font-size: 1rem;
   border-radius: 30px;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(29, 185, 84, 0.3);
-  transition: background 0.3s;
 }
 
 #video-player button:hover {
-  background: #1ed760;
+  background: #f44336;
 }
 
-/* مشغل الصوت المحلي */
-#audio-player {
-  margin: 30px auto;
-  padding: 20px;
-  background: #121212;
-  border: 1px solid #333;
-  border-radius: 10px;
-  max-width: 500px;
-  text-align: center;
-}
-
-/* تأثيرات */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-/* تصميم متجاوب للهاتف */
+/* تصميم متجاوب */
 @media (max-width: 600px) {
   h1 {
     font-size: 2rem;
   }
   .tabs {
-    flex-direction: row;
     overflow-x: auto;
+    white-space: nowrap;
     padding-bottom: 10px;
-    gap: 12px;
   }
   .tab-btn {
     flex: 0 0 auto;
