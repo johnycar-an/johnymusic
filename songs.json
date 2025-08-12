@@ -4,34 +4,34 @@
     "image": "images/majeda.jpg",
     "audio": "https://www.youtube.com/watch?v=DOql4jtuS9k&ab_channel=bahijbacha",
     "language": "arabic",
-    "difficulty": 5
+    "difficulty": -5
   },
   {
     "name": "عمرو دياب - معاك قلبي",
     "image": "images/amrodiab.jpg",
     "audio": "/audio/+3Ablani-Hayk Majida-ELRomi-.mp3",
     "language": "arabic",
-    "difficulty": 3
+    "difficulty": +3
   },
   {
     "name": "إمينم - When I'm Gone",
     "image": "images/Eminem.jpg",
     "audio": "https://www.youtube.com/watch?v=pBk4NYhWNMM",
     "language": "english",
-    "difficulty": 8
+    "difficulty": -8
   },
   {
     "name": "Candan Erçetin SENSİZLİK",
     "image": "images/Candan Erçetin SENSİZLİK.jpg",
     "audio": "https://www.youtube.com/watch?v=CsaMHLDKIhY&list=PLu559MPsSnePbNJvmLK2-mDm6kF8wmYVF",
     "language": "turkish",
-    "difficulty": 6
+    "difficulty": +6
   },
   {
     "name": "موسيقى هادئة",
     "image": "images/instrumental.jpg",
     "audio": "audio/music/01 - Dream Seeker.mp3",
     "language": "music",
-    "difficulty": 2
+    "difficulty": -2
   }
 ]
