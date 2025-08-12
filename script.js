@@ -16,58 +16,37 @@ function displaySongs(songs) {
   });
 }
 
-// تشغيل الأغنية (يوتيوب أو ملف محلي)
+// تشغيل الأغنية (ملف محلي فقط في هذا المثال)
 function playSong(src, name) {
-  const videoPlayer = document.getElementById('video-player');
-  const youtubeFrame = document.getElementById('youtube-frame');
-
   // إخفاء المشغل القديم
-  if (youtubeFrame) youtubeFrame.src = '';
-  videoPlayer.style.display = 'none';
   document.getElementById('audio-player')?.remove();
-
-  // إذا كان رابط يوتيوب
-  if (src.includes('youtube.com') || src.includes('youtu.be')) {
-    const videoIdMatch = src.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/))([^&?/]+)/);
-    const videoId = videoIdMatch ? videoIdMatch[1] : null;
-
-    if (!videoId) {
-      alert('رابط YouTube غير صحيح');
-      return;
-    }
-
-    const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-    youtubeFrame.src = embedUrl;
-    videoPlayer.style.display = 'block';
-
-  } 
-  // إذا كان ملف صوتي محلي
-  else if (src.endsWith('.mp3') || src.includes('audio/')) {
-    const audioPlayer = document.createElement('div');
-    audioPlayer.id = 'audio-player';
-    audioPlayer.style = 'margin: 30px auto; padding: 20px; background: #121212; border: 1px solid #333; border-radius: 10px; max-width: 500px; text-align: center;';
-    audioPlayer.innerHTML = `
-      <h3>🎵 ${name}</h3>
-      <audio controls autoplay style="width: 90%;">
-        <source src="${src}" type="audio/mpeg">
-        لم يُدعم تنسيق الصوت.
-      </audio>
-      <br>
-      <button onclick="this.closest('#audio-player').remove()" style="margin-top: 15px; background: #d32f2f; color: white; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer;">
-        إغلاق
-      </button>
-    `;
-    document.getElementById('songs-container').before(audioPlayer);
-
-  } else {
-    alert('نوع الملف غير مدعوم');
+  document.getElementById('video-player').style.display = 'none';
+  if (document.getElementById('youtube-frame')) {
+    document.getElementById('youtube-frame').src = '';
   }
+
+  // إنشاء مشغل صوتي
+  const audioPlayer = document.createElement('div');
+  audioPlayer.id = 'audio-player';
+  audioPlayer.style = 'margin: 30px auto; padding: 20px; background: #121212; border: 1px solid #333; border-radius: 10px; max-width: 500px; text-align: center;';
+  audioPlayer.innerHTML = `
+    <h3>🎵 ${name}</h3>
+    <audio controls autoplay style="width: 90%;">
+      <source src="${src}" type="audio/mpeg">
+      لم يُدعم تنسيق الصوت.
+    </audio>
+    <br>
+    <button onclick="this.closest('#audio-player').remove()" style="margin-top: 15px; background: #d32f2f; color: white; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer;">
+      إغلاق
+    </button>
+  `;
+  document.getElementById('songs-container').before(audioPlayer);
 }
 
 // إغلاق فيديو اليوتيوب
 function closeVideo() {
   const youtubeFrame = document.getElementById('youtube-frame');
-  youtubeFrame.src = '';
+  if (youtubeFrame) youtubeFrame.src = '';
   document.getElementById('video-player').style.display = 'none';
 }
 
@@ -90,7 +69,7 @@ function filter(lang) {
     });
 }
 
-// تحميل الأغاني
+// تحميل الأغاني عند التحميل
 fetch('songs.json')
   .then(res => res.json())
   .then(songs => {
