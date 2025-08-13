@@ -1,16 +1,16 @@
 [
   {
-    "name": "تجربة - إمينم",
-    "image": "images/Eminem.jpg",
-    "audio": "https://www.youtube.com/watch?v=pBk4NYhWNMM",
-    "language": "english",
-    "difficulty": 8
-  },
-  {
-    "name": "تجربة - ماجدة",
+    "name": "ماجدة الرومي",
     "image": "images/majeda.jpg",
-    "audio": "audio/majeda.mp3",
+    "audio": "https://www.youtube.com/watch?v=DOql4jtuS9k",
     "language": "arabic",
     "difficulty": 5
+  },
+  {
+    "name": "عمر دياب",
+    "image": "images/amrodiab.jpg",
+    "audio": "audio/test.mp3",
+    "language": "arabic",
+    "difficulty": 3
   }
 ]
