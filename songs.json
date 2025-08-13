@@ -1,15 +1,15 @@
 [
   {
-    "name": "تجربة 1",
+    "name": "قبلني هيك",
     "image": "images/majeda.jpg",
-    "audio": "https://www.youtube.com/watch?v=pBk4NYhWNMM",
+    "audio": "https://www.youtube.com/watch?v=AlZdNJIsvlc&ab_channel=KaraokeCabana",
     "language": "arabic",
     "difficulty": 5
   },
   {
-    "name": "تجربة 2",
+    "name": "معاك قلبي",
     "image": "images/amrodiab.jpg",
-    "audio": "https://www.youtube.com/watch?v=bdOkztPm5OQ",
+    "audio": "Maak Alby.mp3",
     "language": "english",
     "difficulty": 3
   }
