@@ -1,16 +1,16 @@
 [
   {
-    "name": "قبلني هيك",
-    "image": "images/majeda.jpg",
-    "audio": "https://www.youtube.com/watch?v=AlZdNJIsvlc&ab_channel=KaraokeCabana",
-    "language": "arabic",
-    "difficulty": 5
+    "name": "تجربة - إمينم",
+    "image": "images/Eminem.jpg",
+    "audio": "https://www.youtube.com/watch?v=pBk4NYhWNMM",
+    "language": "english",
+    "difficulty": 8
   },
   {
-    "name": "معاك قلبي",
-    "image": "images/amrodiab.jpg",
-    "audio": "audio/majeda.mp3"
-    "language": "english",
-    "difficulty": 3
+    "name": "تجربة - ماجدة",
+    "image": "images/majeda.jpg",
+    "audio": "audio/majeda.mp3",
+    "language": "arabic",
+    "difficulty": 5
   }
 ]
