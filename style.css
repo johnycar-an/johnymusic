@@ -1,76 +1,43 @@
-/* تصميم عام */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   background-color: #121212;
   color: #e0e0e0;
   margin: 0;
   padding: 40px 20px;
   direction: rtl;
-  min-height: 100vh;
 }
 
 h1 {
   text-align: center;
   color: #1DB954;
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  font-weight: bold;
-  text-shadow: 0 0 5px rgba(29, 185, 84, 0.3);
 }
 
-/* أزرار التصنيفات */
 .tabs {
   text-align: center;
   margin: 30px 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
 }
 
 .tab-btn {
   background: transparent;
   border: none;
-  padding: 10px 16px;
-  font-size: 1rem;
-  color: #b3b3b3;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #bbb;
   cursor: pointer;
   border-radius: 30px;
-  transition: all 0.3s ease;
-  min-width: 80px;
-  text-align: center;
 }
 
 .tab-btn.active {
-  background: #282828;
-  color: #1DB954;
-  font-weight: bold;
-}
-
-.tab-btn:hover {
-  background: #2a2a2a;
+  background: #1DB954;
   color: white;
 }
 
-/* تخطيط الصور */
-#songs-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
-  padding: 20px 0;
-}
-
 .singer-card {
-  position: relative;
+  display: inline-block;
+  margin: 15px;
   width: 160px;
   cursor: pointer;
   transition: transform 0.2s;
-}
-
-.singer-card:hover {
-  transform: scale(1.05);
-  opacity: 0.9;
 }
 
 .singer-card img {
@@ -78,11 +45,9 @@ h1 {
   height: 160px;
   object-fit: cover;
   border-radius: 10px;
-  border: 2px solid #1DB954;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border: 3px solid #1DB954;
 }
 
-/* الدائرة الحمراء (درجة الصعوبة) */
 .badge {
   position: absolute;
   top: 8px;
@@ -97,72 +62,11 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
   z-index: 2;
-  border: 2px solid white;
 }
 
 .singer-card p {
-  margin: 12px 0 0;
-  font-weight: 600;
-  color: white;
-  font-size: 1rem;
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding: 0 5px;
-}
-
-/* مشغل الفيديو */
-#video-player {
-  display: none;
-  text-align: center;
-  margin: 30px auto;
-  max-width: 900px;
-}
-
-#youtube-frame {
-  width: 100%;
-  max-width: 800px;
-  height: 450px;
-  border-radius: 12px;
-  border: 1px solid #333;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-  margin-bottom: 15px;
-}
-
-#video-player button {
-  background: #d32f2f;
-  color: white;
-  border: none;
-  padding: 12px 30px;
-  font-size: 1rem;
-  border-radius: 30px;
-  cursor: pointer;
-}
-
-#video-player button:hover {
-  background: #f44336;
-}
-
-/* تصميم متجاوب */
-@media (max-width: 600px) {
-  h1 {
-    font-size: 2rem;
-  }
-  .tabs {
-    overflow-x: auto;
-    white-space: nowrap;
-    padding-bottom: 10px;
-  }
-  .tab-btn {
-    flex: 0 0 auto;
-  }
-  .singer-card {
-    width: 140px;
-  }
-  #youtube-frame {
-    height: 300px;
-  }
+  margin: 10px 0 0;
+  font-weight: bold;
+  color: #eee;
 }
