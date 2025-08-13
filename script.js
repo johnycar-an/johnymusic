@@ -86,4 +86,20 @@ function filter(lang) {
       let filtered = songs;
       if (lang === 'arabic') filtered = songs.filter(s => s.language === 'arabic');
       if (lang === 'english') filtered = songs.filter(s => s.language === 'english');
-      if (lang
+      if (lang === 'turkish') filtered = songs.filter(s => s.language === 'turkish');
+      if (lang === 'music') filtered = songs.filter(s => s.language === 'music');
+      displaySongs(filtered);
+    });
+}
+
+// تحميل الأغاني عند التحميل
+fetch('songs.json')
+  .then(res => res.json())
+  .then(songs => {
+    window.allSongs = songs;
+    displaySongs(songs);
+  })
+  .catch(err => {
+    alert('فشل تحميل قائمة الأغاني. تحقق من ملف songs.json');
+    console.error('خطأ:', err);
+  });
